@@ -46,7 +46,7 @@ class GetMensagens:
                 }
             }
         ]
-        print(pipeline)
+        # print(pipeline)
         try:
             self.results = list(self.collection.aggregate(pipeline))
         except Exception as error:
@@ -55,7 +55,7 @@ class GetMensagens:
 
     def returnDB(self, user: str, sistema: str):
       self.getNorificacoesDB(user, sistema)
-      print(self.results)
+    #   print(self.results)
       self.results_array = []
       for doc in self.results:
           self.results_array.append(doc)
@@ -64,3 +64,6 @@ class GetMensagens:
     def insert_message(self, mensagem_data):
         result = self.collection.insert_one(mensagem_data)
         return result
+    
+    def update_message(self, message_id):
+        pass
