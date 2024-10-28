@@ -21,6 +21,11 @@ pyMongo
   uvicorn app:app --reload
 ````
 
+```txt
+  URL consulta: http://127.0.0.1:8000/mensagens?usuario=lpetrolli&sistema=ipva
+  URL Criação: http://127.0.0.1:8000/add_mensagem
+```
+
 ### Exemplo de request para salvar uma mensagem
 ```json
     {
